@@ -1,2 +1,2 @@
 # LoginForm
-Prosty system logowania 
+Prosty system logowania z możliwością wyboru rodzaju konta
