@@ -6,7 +6,6 @@ Prosty system logowania z możliwością wyboru rodzaju konta m.in:
 
 ## Lista rzeczy do zrobienia
 
-Prosty system logowania z możliwością wyboru rodzaju konta
 Done | Zadanie do wykonania
 :------------ | :------------- 
  :heavy_check_mark:  | Stworzenie strony do logowania
