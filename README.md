@@ -15,7 +15,7 @@ Done | Zadanie do wykonania
 ## Do poprawki 
 Done | Zadanie do wykonania
 :------------ | :------------- 
- :x:  | Dodanie dodatkowych validacji (np regex w mailu, można by też do loginów)
- :x:| rozdzielenie frontu od backendu (spakowanie CSS i JS do folderu) 
+ :heavy_check_mark:  | Dodanie dodatkowych validacji (np regex w mailu, można by też do loginów - wymaga jeszcze dopracowania)
+ :heavy_check_mark:| rozdzielenie frontu od backendu (spakowanie CSS i JS do folderu) 
  :x: | Rozdzielenie logiki od widoków (MVC)
- :x: | Zmiana nazwy bazy danych na taką bez polskich znaków, zastosowanie prefixów do tabel. 
+ :heavy_check_mark: | Zmiana nazwy bazy danych na taką bez polskich znaków, zastosowanie prefixów do tabel. 
