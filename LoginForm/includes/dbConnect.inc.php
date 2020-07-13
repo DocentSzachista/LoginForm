@@ -3,7 +3,7 @@
 $servername="localhost";
 $dBUsername="root";
 $dBPassword ="";
-$dBName="bazauczęszczających";
+$dBName="baza_uczeszczajacych";
 
 $conn= mysqli_connect($servername, $dBUsername, $dBPassword, $dBName);
 if(!$conn)
