@@ -10,12 +10,12 @@ if(isset($_SESSION['userId']) && isset($_SESSION['userName']))
     else{
         session_unset();
         session_destroy();
-        header("Location: .../index.php?error=sessionexpired");
+        header("Location: ../index.php?error=sessionexpired");
     }
 }
 else
 {
     echo"Logaj się pierw";
-    header("Location: .../index.php");
+    header("Location: ../index.php");
 }
 ?>
