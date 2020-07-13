@@ -10,7 +10,7 @@ if (isset($_SESSION['userId']) && isset($_SESSION['userName'])) {
     <div class="login-box">
         <div class="login-container">
             <p class="login-phrase">Logowanie</p>
-            <form action="includes/login.php" method="post">
+            <form action="includes/php/login.php" method="post">
                 <input class="login-input UID" name="login" placeholder=" Wprowadz swoj login..." type="text" />
                 <input class="login-input UPW" name="password" placeholder=" Wprowadz swoje haslo..." type="password" />
                 <input class="login-input submit login" name="login-submit" value="Zaloguj" type="submit" />

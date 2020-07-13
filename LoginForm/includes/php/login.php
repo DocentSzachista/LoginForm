@@ -67,7 +67,7 @@ if(isset($_POST['login-submit']))
                     $_SESSION['userName']=$row['username'];
                     $_SESSION['time']=time();
                     // tu kreacja obiektu użytkownika z odpowiednimi parametrami.
-                      header("Location: .../main.php?login=success");
+                      header("Location: ../main.php?login=success");
                       
                      exit();
                 }
