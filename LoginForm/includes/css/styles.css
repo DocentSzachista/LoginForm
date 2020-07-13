@@ -1,0 +1,38 @@
+body {
+    background-color: #57466E;
+}
+.wrapper{
+    padding: 2em;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 80px 1fr ;
+}
+.navbar{
+    grid-row: 1;
+    grid-column: 2/3;
+}
+.chat{
+    grid-row: 2/3;
+    grid-column: 2;
+    
+}
+
+.sidebar{
+    grid-column: 3;
+    grid-row: 2/2;
+
+}
+.button{
+    display: block;
+    margin: auto;
+    width: 180px;
+    outline: none;
+    padding: 10px;
+}
+.button.navbar{
+    display: inline-block;
+    margin: auto;
+}
+.button.sidebar{
+    margin-top: 25px;
+}
