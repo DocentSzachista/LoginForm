@@ -15,7 +15,7 @@ if(isset($_POST['login-submit']))
     if(empty($mailuid ) || empty($password))
     {
         //odsyłamy do strony z logowaniem
-        header("Location: .../index.php?error=emptyfields");
+        header("Location: ../../index.php?error=emptyfields");
         //zabijamy dalsze wykonywanie się skryptu
         exit();
     }
@@ -29,7 +29,7 @@ if(isset($_POST['login-submit']))
         }
         else
         {
-            header("Location: ../index.php?error=notemail");
+            header("Location: ../../index.php?error=notemail");
             exit();
         }
         //inicjalizacja komendy do SQL'a, zwraca obiekt na którym możemy użyć mysqli_stmt_init
@@ -56,7 +56,7 @@ if(isset($_POST['login-submit']))
                 $pwdCheck= password_verify( $password, $row['Password'] );
                 if($pwdCheck==false)
                 {
-                    header("Location: ../index.php?error=wrongpwd");
+                    header("Location: ../../index.php?error=wrongpwd");
                      exit();
                 }
                 //kreacja zmiennej sesji która będzie pamiętała, że jesteśmy zalogowani
@@ -67,14 +67,14 @@ if(isset($_POST['login-submit']))
                     $_SESSION['userName']=$row['username'];
                     $_SESSION['time']=time();
                     // tu kreacja obiektu użytkownika z odpowiednimi parametrami.
-                      header("Location: ../main.php?login=success");
+                      header("Location: ../../main.php?login=success");
                       
                      exit();
                 }
             }
             else
             {
-                header("Location: ../index.php?error=nouser");
+                header("Location: ../../index.php?error=nouser");
            exit();
             }
         }
