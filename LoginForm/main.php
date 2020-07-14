@@ -9,7 +9,7 @@ require_once './includes/php/session.php';
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SkyBlueEducation</title>
-    <link rel="stylesheet" href="./includes/styles.css" />
+    <link rel="stylesheet" href="./includes/css/styles.css" />
   </head>
   <body>
     <div class="wrapper">
@@ -32,7 +32,7 @@ require_once './includes/php/session.php';
         <button class="button sidebar">Ostatnia lekcja</button>
         <button class="button sidebar">Wszystkie lekcje</button>
         <button class="button sidebar">Odwołaj lekcje</button>
-        <form action="includes/logout.php" method="post">
+        <form action="includes/php/logout.php" method="post">
         <button class="button sidebar logout">Wyloguj</button>
         </form>
       </div>
