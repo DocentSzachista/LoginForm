@@ -23,15 +23,8 @@ if(isset($_POST['login-submit']))
     {
         //przygotowujemy statement z SQL'a
         //tu dobrze by było zawrzeć funckję
-        if(filter_var($mailuid, FILTER_VALIDATE_EMAIL))
-        {
-           $sql= "SELECT * FROM uczniowie WHERE email=?;"; 
-        }
-        else
-        {
-            header("Location: ../../index.php?error=notemail");
-            exit();
-        }
+           $sql= checkIfMail($mailuid); 
+      
         //inicjalizacja komendy do SQL'a, zwraca obiekt na którym możemy użyć mysqli_stmt_init
         $stmt= mysqli_stmt_init( $conn );
         //sprawdzamy czy komenda jest przygotowana do wykonania 
@@ -88,26 +81,20 @@ if(isset($_POST['login-submit']))
     exit();
     
 }
-/*
+
 function checkIfMail($login)
 {
     if(filter_var($login, FILTER_VALIDATE_EMAIL))
     {
         // statement z SQL'a i cała ta robota dla maili
-        
+        return  "SELECT * FROM uczniowie WHERE email=?;"; 
     }
     else
     {
         // robota dla
-        gettingData($login);
+        return "SELECT * FROM uczniowie WHERE username=?";
     }
 }
-function gettingData($login)
-{
-    $sql= "SELECT * FROM uczniowie WHERE username=? OR email=?;"; 
-    $stmt== mysqli_stmt_init( $conn );
-    return $stmt;
-}
- */
+
  
 ?>
