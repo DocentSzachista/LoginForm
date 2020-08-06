@@ -1,32 +1,33 @@
- var userClass = document.getElementsByClassName("user");
-      var inputs = document.getElementsByClassName("login-input");
-      var back = document.getElementsByClassName("back");
-      var login = document.getElementsByClassName("login");
-      var userTypeInput = document.getElementById("userChoice");
-      var userDisplay = "inline-block";
-      var inputDisplay = "none";
+var userChoice = document.getElementById("userType")
 
-      function setDisplay() {
-        var x = userClass.length;
-        var y = inputs.length;
-        for (var i = 0; i < y; i++) {
-          inputs[i].style.display = inputDisplay;
-        }
-        for (var i = 0; i < x; i++) {
-          userClass[i].style.display = userDisplay;
-        }
-      }
-      setDisplay();
+var parentLogin = document.getElementById("parentLogin")
+var parentEmail = document.getElementById("parentEmail")
+var parentPassword = document.getElementById("parentPassword")
 
-      function changeDisplay() {
-        let t = inputDisplay;
-        inputDisplay = userDisplay;
-        userDisplay = t;
-        setDisplay();
-      }
+var studentLogin = document.getElementById("studentLogin")
+var studentUsername = document.getElementById("studentUsername")
+var studentPassword = document.getElementById("studentPassword")
 
-      back[0].onclick = userClass[0].onclick = userClass[1].onclick = userClass[2].onclick = function () {
-        changeDisplay();
-        userType = this.value;
-        userTypeInput.value = userType
-      };
+function setUser(login) {
+  userChoice.value = login.value
+  if(login.value == "student"){
+    parentEmail.name = ""
+    parentPassword.name = ""
+    studentUsername.name = "login"
+    studentPassword.name = "password"
+  }else if(login.value == "parent"){
+    studentPassword.name = ""
+    studentUsername = ""
+    parentEmail.name = "login"
+    parentPassword.name = "password"
+  }
+}
+
+studentLogin.addEventListener('click', function (event) {
+  setUser(this);
+})
+parentLogin.addEventListener('click', function (event) {
+  setUser(this);
+})
+
+
